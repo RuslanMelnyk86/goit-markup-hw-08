@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+
+  color: $primary-text-color;
+  font-family: $font-family;
+  letter-spacing: $letter-spacing;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  bottom: 0;
+}

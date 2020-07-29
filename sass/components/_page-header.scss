@@ -1,0 +1,37 @@
+.container {
+  /* width: 1200px;*/
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+.main-container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    /*width: 100%;*/
+    border: 1px solid #ececec;
+    /*margin-bottom: 70px;*/
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ececec;
+    /*margin-bottom: 70px;*/
+  }
+}

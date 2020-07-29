@@ -1,0 +1,84 @@
+.nav {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  /* @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }*/
+}
+.site-nav {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin: 0;
+
+    position: relative;
+
+    & .item:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    & .item {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+}
+
+.site-nav .link {
+  @media screen and (max-width: 767px) {
+    color: $primary-text-color;
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    color: $primary-text-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.link.current-studio::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 49px;
+  height: 4px;
+
+  background-color: $accent-color;
+  border-radius: 2px;
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    width: 61px;
+    height: 4px;
+  }
+}
+
+.site-nav .link.current-studio {
+  color: $accent-color;
+}

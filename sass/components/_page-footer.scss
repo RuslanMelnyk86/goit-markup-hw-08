@@ -1,0 +1,27 @@
+.page-footer {
+  background-color: $footer-bg-color;
+}
+.main-container-footer {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.address-social-container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
