@@ -40,14 +40,15 @@
   }
   .item-team {
     @media screen and (min-width: $mobile) {
-      margin: 15px;
+      margin-bottom: 15px;
+
+      width: 100%;
     }
 
     @media screen and (min-width: $tablet) {
       width: calc((100% - 4 * 15px) / 2);
       margin: 15px;
       align-items: center;
-      width: 270px;
     }
 
     @media screen and (min-width: $desktop) {

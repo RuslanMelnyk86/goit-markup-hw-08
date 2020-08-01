@@ -1,16 +1,108 @@
 .container {
-  width: 1200px;
+  position: relative;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+    min-height: 60px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 .main-container-portfolio {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ececec;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ececec;
+  }
+}
+.menu-button {
+  background-color: $secondary-text-color;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+  fill: #000000;
+
+  &:hover {
+    fill: $accent-color;
+  }
+
+  .icon-close-menu {
+    display: none;
+  }
+
+  &.is-open .icon-close-menu {
+    display: block;
+    fill: black;
+
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 98%;
+    left: 0;
+    width: 100%;
+    padding: 60px 0px;
+    text-align: center;
+    font-size: 18px;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: transform 250ms, opacity 250ms;
+
+    &.is-open {
+      display: block;
+      transform: translateY(0%);
+      opacity: 1;
+      z-index: 99;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   border: 1px solid #ececec;
   margin-bottom: 93px;
-}
+}*/

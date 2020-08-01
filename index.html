@@ -22,33 +22,56 @@
             <span class="logo-header-blue">Web</span>
             <span class="logo-header-black">Studio</span>
           </a>
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              width="24"
+              height="16"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-close-menu"
+                href="./image/sprite3.svg#Vector-2"
+              ></use>
+              <use class="icon-menu" href="./image/sprite3.svg#menu_24px"></use>
+            </svg>
+          </button>
           <div class="menu-container" id="menu-container" data-menu>
             <ul class="site-nav list">
               <li class="item">
-                <a href="" class="link current-studio">Студия</a>
+                <a href="./index.html" class="link current-studio">Студия</a>
               </li>
               <li class="item">
                 <a href="./portfolio.html" class="link">Портфолио</a>
               </li>
               <li class="item"><a href="" class="link">Контакты</a></li>
             </ul>
-            </nav>
-            <address class="contact">
-              <a class="contact-link-mail" href="mailto:info@devstudio.com">
-                <svg class="ico-n" width="16" height="10">
-                  <use href="./image/sprite.svg#envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-              <a href="tel:+3809611111111" class="contact-link-phone">
-                <svg class="ico-n" width="10" height="14">
-                  <use href="./image/sprite.svg#smartphone"></use>
-                </svg>
-                +38096111111</a
-              >
-            </address>
+
+            <ul class="contact list">
+              <li>
+                <a href="mailto:info@devstudio.com" class="contact-link-mail">
+                  <svg class="ico-n" width="16px" height="11px">
+                    <use href="./image/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+380961111111" class="contact-link-phone">
+                  <svg class="ico-n" width="10px" height="15px">
+                    <use href="./image/sprite.svg#smartphone"></use>
+                  </svg>
+                  +38096111111</a
+                >
+              </li>
+            </ul>
           </div>
-       
+        </nav>
       </div>
     </header>
     <main>
@@ -112,7 +135,7 @@
               placeholder="Коментарии "
             ></textarea>
 
-            <label class="modal-input checkbox-field">
+            <label class="modal-inputt checkbox-field">
               <input class="checkbox" type="checkbox" />
               <span class="checkbox-icon"></span>
               <span class="subscribe"
@@ -231,7 +254,37 @@
             <h2 class="section-title-studio">Наша команда</h2>
             <ul class="team-list list">
               <li class="item-team">
-                <img src="image/John.jpg" alt="John" width="270" />
+                <picture>
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-John-270w.jpg    270w,
+                      ./image/JPG/team/team-John-540w@2x.jpg 540w
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-John-354w.jpg    354w,
+                      ./image/JPG/team/team-John-708w@2x.jpg 708w
+                    "
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-John-450w.jpg    450w,
+                      ./image/JPG/team/team-John-900w@2x.jpg 900w
+                    "
+                    media="(max-width: 767px)"
+                    sizes="450px"
+                  />
+                  <img
+                    src="./images/Team/team-John-450w.jpg"
+                    alt="Фото John Smith"
+                  />
+                </picture>
+
                 <h3 class="title">John Smith</h3>
                 <p class="text-team">Product Designer</p>
                 <ul class="icone-link list">
@@ -279,7 +332,37 @@
               </li>
 
               <li class="item-team">
-                <img src="image/Marta.jpg" alt="Marta" width="270" />
+                <picture>
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Marta-270w.jpg    270w,
+                      ./image/JPG/team/team-Marta-540w@2x.jpg 540w
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Marta-354w.jpg    354w,
+                      ./image/JPG/team/team-Marta-708w@2x.jpg 708w
+                    "
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Marta-450w.jpg    450w,
+                      ./image/JPG/team/team-Marta-900w@2x.jpg 900w
+                    "
+                    media="(max-width: 767px)"
+                    sizes="450px"
+                  />
+                  <img
+                    src="./images/Team/team-Marta-450w.jpg"
+                    alt="Фото Marta Stewart"
+                  />
+                </picture>
+
                 <h3 class="title">Marta Stewart</h3>
                 <p class="text-team">Frontend Developer</p>
                 <ul class="icone-link list">
@@ -327,7 +410,36 @@
               </li>
 
               <li class="item-team">
-                <img src="image/Robert.jpg" alt="Robert" width="270" />
+                <picture>
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Robert-270w.jpg    270w,
+                      ./image/JPG/team/team-Robert-540w@2x.jpg 540w
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Robert-354w.jpg    354w,
+                      ./image/JPG/team/team-Robert-708w@2x.jpg 708w
+                    "
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Robert-450w.jpg    450w,
+                      ./image/JPG/team/team-Robert-900w@2x.jpg 900w
+                    "
+                    media="(max-width: 767px)"
+                    sizes="450px"
+                  />
+                  <img
+                    src="./images/Team/team-Robert-450w.jpg"
+                    alt="Фото Robert Jakis"
+                  />
+                </picture>
                 <h3 class="title">Robert Jakis</h3>
                 <p class="text-team">Marketing</p>
                 <ul class="icone-link list">
@@ -367,7 +479,37 @@
               </li>
 
               <li class="item-team">
-                <img src="image/Martin.jpg" alt="Martin" width="270" />
+                <picture>
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Martin-270w.jpg    270w,
+                      ./image/JPG/team/team-Martin-540w@2x.jpg 540w
+                    "
+                    media="(min-width: 1200px)"
+                    sizes="270px"
+                  />
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Martin-354w.jpg    354w,
+                      ./image/JPG/team/team-Martin-708w@2x.jpg 708w
+                    "
+                    media="(min-width: 768px)"
+                    sizes="354px"
+                  />
+                  <source
+                    srcset="
+                      ./image/JPG/team/team-Martin-450w.jpg    450w,
+                      ./image/JPG/team/team-Martin-900w@2x.jpg 900w
+                    "
+                    media="(max-width: 767px)"
+                    sizes="450px"
+                  />
+                  <img
+                    src="./images/Team/team-Martin-450w.jpg"
+                    alt="Фото Martin Doe"
+                  />
+                </picture>
+
                 <h3 class="title">Martin Doe</h3>
                 <p class="text-team">UI Designer</p>
                 <ul class="icone-link list">
